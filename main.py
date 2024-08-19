@@ -23,7 +23,7 @@ def select_directory():
     root.title("Select a folder")
 
     user_name = os.getlogin()  # testar tbm com os.environ['USERNAME']
-    base_dir = f'C:\\Users\\{user_name}\\GitLab'
+    base_dir = f'C:\\Users\\{user_name}\\Git'
     
     if not os.path.isdir(base_dir):
         messagebox.showerror("Error", f"The directory {base_dir} not exist.")
@@ -55,7 +55,7 @@ def run_git_commands():
     user_name = os.getlogin()
     folder = select_directory()
     
-    repo_dir = f'C:\\Users\\{user_name}\\GitLab\\{folder}'
+    repo_dir = f'C:\\Users\\{user_name}\\Git\\{folder}'
     commit_message = get_commit_message()
     
     git_commands = [
